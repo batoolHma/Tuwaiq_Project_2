@@ -10,15 +10,15 @@ const app = express();
 //built-in middlewares
 app.use(express.json());
 
-app.use('/user',userRouter)// work is here
+
 //third-party middleware
-//app.use(cors());
+app.use(cors());
 
 //app routers
+app.use('/user',userRouter)// work is here
 
 
-
-const PORT = process.env.PORT || 6600;
+const PORT = process.env.PORT ||5000;
 
 app.listen(PORT, () => {
 	console.log(`Server On ${PORT}`);
