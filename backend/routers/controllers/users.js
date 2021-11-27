@@ -1,4 +1,5 @@
-const {user,dashbord} = require('../db')
+const { response } = require('express');
+const {user} = require('../db')
 
 
 const getAllUsers = (req,res)=>{
@@ -37,17 +38,16 @@ const updateUser=(req,res)=>{
     })
 }
 
-//////////////////////////////////for the cards
-const getAll =(req,res)=>{
-            res.send(dashbord)
-        }
+//dashboard
 
 
-module.exports={getAllUsers,getUser,addUser,updateUser,getAll}
-/////////////////calling the information for the cards////////////
-// const {dashbord}=require('../db')
+function userInfo(req,res){
+const info= user.find(({id}) => id === parseInt(req.body.id));
+    if (info) 
+        res.send(info)
+        else
+        res.status(404).send(error)
+    }
 
-//     const getAll =(req,res)=>{
-//         res.send(dashbord)
-//     }
-//     module.exports={getAll}
+module.exports={getAllUsers,getUser,addUser,updateUser,userInfo}
+

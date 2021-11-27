@@ -1,34 +1,39 @@
 import React from "react";
-import { Carousel } from "react-bootstrap";
-
+import { Carousel, Container } from "react-bootstrap";
+import About from './about'
+import crosal3 from '../images/crosal3.png'
+import crosal2 from '../images/crosal2.png'
+import crosal1 from '../images/crosal1.png'
 const Main = () => {
   return (
     <div className="App">
       <Carousel>
         <Carousel.Item>
           <img
-            className="d-block w-70 "
-            src="https://ta.sdaia.gov.sa/images/hero.png"
+            className="d-block w-100 h-100 "
+           
+            src={crosal3}
             alt="First slide"
           />
           
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-50"
-            src="https://saudigazette.com.sa/uploads/images/2021/01/31/1735234.jpeg"
+            className="d-block  w-100 h-100"
+            src={crosal2}
             alt="Second slide"
           />
         </Carousel.Item>
         <Carousel.Item>
           <img
-            className="d-block w-50"
-            src="https://tawakkalna.sdaia.gov.sa/assets/img/illustrations/twlogo.png"
+            className="d-block  w-100 h-100"
+            src={crosal1}
             alt="Third slide"
           />
         </Carousel.Item>
       </Carousel>
-      <img src="..../images/howtworks.png"/> //stilllll how to
+      <hr style={{color:'white'}}/>
+      <br/>
     
     </div>
   );

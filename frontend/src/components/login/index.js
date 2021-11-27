@@ -8,21 +8,24 @@ import { useNavigate, Link } from "react-router-dom";
 export default function LogIn() {
   const [userName, setuserName] = useState("");
   const [passWord, setpassWord] = useState("");
+
   const navigate = useNavigate();
 
   function handleSubmit(event) {
     event.preventDefault();
     const data = {
+      
       userName: userName,
       passWord: passWord,
     };
     console.log(data);
     axios
-      .post("http://localhost:5000/user", data)
+      .post("user/login/", data)
       .then((res) => {
         console.log(res);
-        console.log(res.data);
-        navigate("/Main");
+        navigate('/afterLogin ', { state: { id:res.data.id} });
+
+        // navigate("/afterLogin");
       })
       .catch((err) => {
         console.log(err.response.data);

@@ -7,9 +7,9 @@ const Footer = () => {
     <div> 
       <Row id="footerimg">
             <Col xs={6} md={4}>
-			<img src="https://ta.sdaia.gov.sa/images/NewImages/logo.svg" width="150px" height="100px"/>
+			<img className="footerimg" src="https://ta.sdaia.gov.sa/images/NewImages/logo.svg" width="150px" height="100px"/>
 			<br/>
-			<img src="https://ta.sdaia.gov.sa/images/sdaia.svg"width="150px" height="100px" />
+			<img className="footerimg" src="https://ta.sdaia.gov.sa/images/sdaia.svg"width="150px" height="100px" />
              </Col>
 			
             
