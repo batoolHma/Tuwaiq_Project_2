@@ -24,7 +24,7 @@ export default function LogIn() {
       .then((res) => {
         console.log(res);
         navigate('/afterLogin ', { state: { id:res.data.id} });
-
+        localStorage.setItem("userId",res.data.id)
         // navigate("/afterLogin");
       })
       .catch((err) => {

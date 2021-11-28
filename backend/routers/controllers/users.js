@@ -9,15 +9,19 @@ const getUser=(req,res)=>{
   const {userName,passWord}=req.body;
   console.log(req.body);
   const foundUser=user.find((elem)=>{
-      return (elem.userName==userName && elem.passWord==passWord) //id from the index of the array.//dose not work!!
-      console.log(foundUser)
+      return (elem.userName==userName && elem.passWord==passWord) 
+      //id from the index of the array.//dose not work!!
+    
   })  
+  console.log(foundUser)
   
-  if(foundUser){
+  if(foundUser)
       res.send(foundUser)
-      return
-  }
-  res.status(404).send('can not find the user!!')
+    //   return
+    else
+    res.status(404).send('can not find the user!!')
+  
+ 
 }
 const addUser=(req,res)=>{
     const addedUser={
@@ -39,15 +43,27 @@ const updateUser=(req,res)=>{
 }
 
 //dashboard
+function dashBoard(req,res){
+    
+    const dash=user.find(({id})=>id === parseInt(req.query.id));
+        if (dash) 
+            res.send(dash)
+            else
+            res.status(404).send("error!!data are not found")
+
+    }
 
 
 function userInfo(req,res){
+    //   user.push(addUser)
+    console.log("hello",req.body);
 const info= user.find(({id}) => id === parseInt(req.body.id));
     if (info) 
         res.send(info)
         else
-        res.status(404).send(error)
+        res.status(404).send("error!! cannot found the user please try again")
+      
     }
 
-module.exports={getAllUsers,getUser,addUser,updateUser,userInfo}
+module.exports={getAllUsers,getUser,addUser,updateUser,userInfo,dashBoard}
 

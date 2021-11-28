@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import "./dashboard.css";
 import Navigation from "../navigation/index";
 //photo
@@ -18,32 +18,31 @@ import img10 from '../images/qias.png'
 import img11 from '../images/traficviolation.png'
 
 
-export default function Dashboard() {
-  const {state} = useLocation();
-  console.log(state);
-  const userId = state.Id;
-  const [data, setData] = useState([]);
-  const navigate = useNavigate();
-  useEffect(() => {
-    axios({
-      method: "POST",
-      url: "user/info/dash",
-      data: {
-        id: userId,
-      },
-    })
-      .then((res) => {
-        setData(res.data);
-        navigate('dashboard ', { state: { id:res.data.id} });
-        //  navigate('dashbord ', { state: { id:res.data.id} });
-         navigate("/dashboard");
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  }, []);
-  console.log(data);
 
+export default function Dashboard() {
+  const [user, setUser] = useState({});
+  useEffect(async () => {
+    const userId = await localStorage.getItem("userId");
+  
+
+    const params={
+          id:userId
+        }
+        if (userId){
+        axios
+        .get('dashboard',{
+          params:params
+        })
+        .then(res=>{
+          console.log(res);
+        })
+      .catch((err)=>{
+        console.log(err);
+      })
+    }
+  }
+
+  )
   return (
     <div >
       <Navigation />
@@ -55,7 +54,7 @@ export default function Dashboard() {
                 <img width="50px"src={img1}/>
                 <hr />
                 <Card.Title style={{color:'#01937C',textAlign:"center"}}>
-                 Vehicales
+                { user && user.vehicals && user.vehicals.number }
                 </Card.Title>
                 <Card.Text>
                 Vehicales count

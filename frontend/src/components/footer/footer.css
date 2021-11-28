@@ -1,13 +1,14 @@
 #footerimg{
     justify-content: space-between;
     align-content: flex-start;
+    margin-left: 20px;
 }
 .links{
    display: block ;
    text-align: left;
    text-decoration: none;
-   color: black;
-   
+   color: rgb(105, 101, 101);
+   margin-top: 15px;
 
 }
 .footer{
@@ -20,4 +21,8 @@
 }
 .footerimg{
     margin-left: 20px;
+}
+.apps{
+    
+    padding: 5px;
 }

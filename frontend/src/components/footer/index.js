@@ -25,10 +25,10 @@ const Footer = () => {
 				<a  className="links" href="https://ta.sdaia.gov.sa/en/terms-en.html">Terms and Conditions</a>
 				</Col>
 				<Col xs={6} md={4}>
-                <p>Download the app</p>
-                <img src="https://ta.sdaia.gov.sa/images/NewImages/googleplay.png" width="100px"/>
-				<img src="https://ta.sdaia.gov.sa/images/NewImages/appstore.png" width="100px"/>
-				<img src="https://ta.sdaia.gov.sa/images/NewImages/huaweigalary.png" width="100px"/>
+                <p style={{marginTop: '15px',color:'rgb(105, 101, 101)'}}>Download the app</p>
+                <img className="apps" src="https://ta.sdaia.gov.sa/images/NewImages/googleplay.png" width="100px"/>
+				<img className="apps" src="https://ta.sdaia.gov.sa/images/NewImages/appstore.png" width="100px"/>
+				<img className="apps" src="https://ta.sdaia.gov.sa/images/NewImages/huaweigalary.png" width="100px"/>
 				</Col>
 				</Row>
           
