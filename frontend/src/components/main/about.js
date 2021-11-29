@@ -1,13 +1,13 @@
 import React from "react";
 import {Container} from 'react-bootstrap'
 import { Link } from "react-router-dom";
-import img from '../images/howtworks.png'
+
 export default function About() {
   return(
     <div>
-  <Container>
+  {/* <Container> */}
   <div>
-   <h3 style={{fontFamily:'fantasy',fontSize:'1cm',color:'#59886B'}}>About Tawakkalna</h3>
+   <h2 style={{fontFamily:'fantasy',fontSize:'1cm',color:'#59886B',textAlign:'center'}}>About Tawakkalna</h2>
    <img
      src="https://ta.sdaia.gov.sa/images/app.png" width="30px"
      className="d-block w-50"
@@ -36,7 +36,7 @@ export default function About() {
      notify Ministry of Health in the event of a suspected case.
    </p>
  </div>
- <h3 style={{fontFamily:'fantasy',fontSize:'1cm',color:'#59886B'}}> How Tawakkalna Work</h3>
+ {/* <h3 style={{fontFamily:'fantasy',fontSize:'1cm',color:'#59886B'}}> How Tawakkalna Work</h3>
       <img src={ img}width="100%"/>
   </Container>
   <Container>
@@ -46,7 +46,7 @@ export default function About() {
      <h3 style={{color:"#216353",fontFamily:'unset',fontSize:'small',marginLeft:'15px'}}>Twitter:TawakkalnaApp</h3>
      <h3 style={{color:"#216353",fontFamily:'unset',fontSize:'10px',marginLeft:'15px'}}>E-mail:contact@tawakkalna.gov.sa</h3>
     </div>
-  </Container>
+  </Container> */}
   </div>
   )
 }

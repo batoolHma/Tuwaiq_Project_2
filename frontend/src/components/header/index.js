@@ -1,5 +1,6 @@
 import React from 'react';
 import {Navbar,Nav , Container,Button} from 'react-bootstrap';
+import {Link} from 'react-router-dom'
 const Header = () => {
 	return <div className="App">
 	
@@ -9,12 +10,12 @@ const Header = () => {
 		/>
     
     <Nav className="me-auto">
-    <Nav.Link href="/">Home</Nav.Link>
-      <Nav.Link href="about">About Tawakklna</Nav.Link>
-      <Nav.Link href="htw">How Tawakklna works</Nav.Link>
-      <Nav.Link href="/">Contact Us</Nav.Link>
+    <Nav.Link ><Link style={{textDecoration:'none',color:'gray'}}to="/">Home</Link></Nav.Link>
+      <Nav.Link> <Link style={{textDecoration:'none',color:'gray'}} to="about">About Tawakklna</Link></Nav.Link>
+      <Nav.Link> <Link style={{textDecoration:'none',color:'gray'}} to="/htwork">How Tawakklna works</Link></Nav.Link>
+      <Nav.Link><Link style={{textDecoration:'none',color:'gray'}} to="cus">Contact Us</Link></Nav.Link>
       
-      <Button  href="login"type="submit" style={{backgroundColor:"#A20A0A",color:"white"}}>Login</Button>
+      <Button style={{backgroundColor:'#105652'}} href="login"type="submit" >Login</Button>
     </Nav>
     </Container>
   </Navbar>

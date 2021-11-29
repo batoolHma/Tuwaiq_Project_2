@@ -37,12 +37,12 @@ export default function SignUp() {
   }
 
   return (
-    <div className="signUp">
+    <div style={{border:'solid',color:"white",backgroundColor:'#CDF2CA'}} className="signUp">
       <Container>
         <Row>
           <Form onSubmit={handleSubmit}>
             <Form.Group size="lg" controlId="userName">
-              <Form.Label>User Name</Form.Label>
+              <Form.Label  style={{color:'black'}} >User Name</Form.Label>
               <Form.Control
                 type="text"
                 value={userName}
@@ -50,7 +50,7 @@ export default function SignUp() {
               />
             </Form.Group>
             <Form.Group size="lg" controlId="userName">
-              <Form.Label>National Id</Form.Label>
+              <Form.Label  style={{color:'black'}}>National Id</Form.Label>
               <Form.Control
                 type="text"
                 value={NationalId}
@@ -58,14 +58,14 @@ export default function SignUp() {
               />
             </Form.Group>
             <Form.Group size="lg" controlId="password">
-              <Form.Label>PassWord</Form.Label>
+              <Form.Label  style={{color:'black'}}>PassWord</Form.Label>
               <Form.Control
                 type="password"
                 value={passWord}
                 onChange={(event) => setPassword(event.target.value)}
               />
             </Form.Group>
-            <Button  size="lg" type="submit" disabled={!validateForm()}>
+            <Button style={{backgroundColor:'#105652'}} size="lg" type="submit" disabled={!validateForm()}>
               sign Up
             </Button>
           </Form>

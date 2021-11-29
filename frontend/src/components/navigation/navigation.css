@@ -1,5 +1,6 @@
 .Navbar{
 margin-top: 20px;
+margin-left: 100px;
  height: 80px;
  display: flex;
  justify-content: start; 
@@ -11,12 +12,12 @@ align-items:center ;
     background: none;
 }
 .nav-menu{
-    background-color:#01937C; 
+    background-color:rgb(213, 253, 244); 
     width:250px ;
     height: 100vh;
    display: flex;
    justify-content:center ; 
-   position: fixed;
+   position:fixed;
    top: 0;
    left: -100%;
    transition: 850ms;
@@ -36,7 +37,7 @@ align-items:center ;
 }
 .nav-text a{
     text-decoration: none;
-    color: white;
+    color: black;
     font-size: 18px;
     width: 95%;
     height: 100%;
@@ -46,13 +47,13 @@ align-items:center ;
     border-radius: 4px;
 }
 .nav-text a:hover{
-    background-color:wheat;
+    background-color:white;
 }
 .nav-menu.items{
     width: 100%;
 }
 .navbar-toggle{
-    background-color: #01937C;
+    background-color: rgb(213, 253, 244);
     width: 100%;
     height: 80px;
     display: flex;

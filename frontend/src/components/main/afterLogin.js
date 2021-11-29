@@ -2,8 +2,8 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Col, Card, Container, Row } from "react-bootstrap";
 import Navigation from "../navigation";
-import { useLocation } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
+import img from '../images/helthstatus.png'
 //date changeing
 const current = new Date();
 const date = `Date: ${current.getDate()}/${
@@ -13,8 +13,10 @@ const date = `Date: ${current.getDate()}/${
 const NextMain = () => {
   //userinfo
   const state = useLocation();
-  console.log(state.state);
+  // console.log("inside: after login page!: "+state.id);
+  // if(state){
 
+  // }
   const [user, setUser] = useState([]);
   // const [drivingLicense,setDrivingLicense]=useState({});
 
@@ -36,10 +38,7 @@ const NextMain = () => {
         .then((res) => {
           console.log(res);
           setUser(res.data);
-          // setDrivingLicense(res.data.drivingLicense)
-          // navigate('dashboard ', { state: { id:res.data.id} });
-
-          // navigate("/afterLogin");
+          
         })
         .catch((err) => {
           console.log(err.response.data);
@@ -48,13 +47,16 @@ const NextMain = () => {
   }, []);
 
   return (
-    <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr 1fr" }}>
+    <div >
+      <Container>
+      <Container>
       <Row>
-        <Navigation />
-      </Row>
+     
+        <Col>
 
-      <Row>
-        <Col md={20}>
+        <Navigation />
+        </Col>
+       <Col  >
           <Card>
             <Card.Body>
               <Col>
@@ -69,25 +71,14 @@ const NextMain = () => {
             </Card.Body>
           </Card>
         </Col>
-        <Col md={20}>
-          <Card>
-            <Card.Body>
-              <Col>
-                {""}
-                <p>NO THING IS HERE YET.</p>
-              </Col>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
-
-      <Col>
+        <Col>
         <Card
           style={{
-            width: "20rem",
+            width: "15rem",
+           
             backgroundColor: "#1b5e20",
             borderRadius: "5px",
-            marginInline: "130px",
+            marginInline: "60px",
           }}
         >
           <Card.Img
@@ -101,8 +92,34 @@ const NextMain = () => {
               last update:{date}
             </Card.Title>
           </Card.Body>
+          
+         
         </Card>
       </Col>
+      </Row>
+      </Container>
+      <Container>
+      <Row>
+      <Col></Col>
+      <Col> <Card>
+            <Card.Body>
+              <Col>
+                {""}
+                <p>NO THING IS HERE YET.</p>
+              </Col>
+            </Card.Body>
+          </Card></Col>
+      <Col>
+        <img src={img} />
+        </Col>
+    
+        
+        </Row>
+</Container>
+
+
+       
+      </Container>
     </div>
   );
 };

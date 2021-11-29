@@ -36,7 +36,7 @@ export default function LogIn() {
   }
 
   return (
-    <div className="Login">
+    <div style={{border:'solid',color:"white",backgroundColor:'#CDF2CA'}} className="Login">
       <Container>
         <Row>
           <Col xs></Col>
@@ -45,14 +45,15 @@ export default function LogIn() {
               {" "}
               <img
                 id="logo"
+                width="10px"
                 src="https://tawakkalna.sdaia.gov.sa/assets/img/illustrations/twlogo.png"
               />
             </div>
             <div className="row">
-              <div className="col">Login</div>
+              <div style={{color:'black'}} className="col">Login</div>
               <div className="col">
                 {" "}
-                <Link to="/signup" id="link">
+                <Link style={{textDecoration:'none',color:'black'}} to="/signup" id="link">
                   sing up{" "}
                 </Link>{" "}
               </div>{" "}
@@ -63,7 +64,7 @@ export default function LogIn() {
               }}
             >
               <Form.Group className="mb-3" controlId="">
-                <Form.Label> Enter User Name </Form.Label>
+                <Form.Label style={{color:'black'}}> Enter User Name </Form.Label>
                 <Form.Control
                   type="id"
                   placeholder=" user name"
@@ -74,7 +75,7 @@ export default function LogIn() {
                 <Form.Text className="text-muted"></Form.Text>
               </Form.Group>
               <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>PassWord</Form.Label>
+                <Form.Label style={{color:'black'}}>PassWord</Form.Label>
                 <Form.Control
                   type="passWord"
                   placeholder="Password"
@@ -86,7 +87,7 @@ export default function LogIn() {
               <Form.Group className="mb-3" controlId="formBasicCheckbox">
                 <Form.Check type="checkbox" label="Check me out" />
               </Form.Group>
-              <Button variant="primary" type="submit">
+              <Button style={{backgroundColor:'#105652',alignItems:'center'}} variant="primary" type="submit">
                 LogIn
               </Button>
             </Form>
