@@ -48,14 +48,11 @@ const NextMain = () => {
 
   return (
     <div >
-      <Container>
-      <Container>
-      <Row>
-     
-        <Col>
-
         <Navigation />
-        </Col>
+
+      <Container>
+     
+        <Row>
        <Col  >
           <Card>
             <Card.Body>
@@ -74,7 +71,7 @@ const NextMain = () => {
         <Col>
         <Card
           style={{
-            width: "15rem",
+            width: "20rem",
            
             backgroundColor: "#1b5e20",
             borderRadius: "5px",
@@ -97,10 +94,8 @@ const NextMain = () => {
         </Card>
       </Col>
       </Row>
-      </Container>
-      <Container>
+     
       <Row>
-      <Col></Col>
       <Col> <Card>
             <Card.Body>
               <Col>
@@ -113,13 +108,13 @@ const NextMain = () => {
         <img src={img} />
         </Col>
     
-        
         </Row>
+
 </Container>
 
 
        
-      </Container>
+    
     </div>
   );
 };

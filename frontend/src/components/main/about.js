@@ -1,19 +1,23 @@
 import React from "react";
-import {Container} from 'react-bootstrap'
+import {Container,Row,Col} from 'react-bootstrap'
 import { Link } from "react-router-dom";
 
 export default function About() {
   return(
     <div>
-  {/* <Container> */}
-  <div>
-   <h2 style={{fontFamily:'fantasy',fontSize:'1cm',color:'#59886B',textAlign:'center'}}>About Tawakkalna</h2>
+      <h2 style={{fontFamily:'fantasy',fontSize:'1.5cm',color:'#59886B',textAlign:'center'}}>About Tawakkalna</h2>
+  <Container>
+    <Row >
+      <Col>
+  
+   
    <img
      src="https://ta.sdaia.gov.sa/images/app.png" width="30px"
-     className="d-block w-50"
+     className="d-block w-100"
    />
-
-   <p style={{fontFamily:"sans-serif",fontSize:'0.5cm',color:'#222831'}}>
+   </Col>
+   <Col>
+   <p style={{ textAlign: "center", fontFamily: "serif",color:'#105652',fontSize:'0.5cm' }}>
      As the Saudi Arabian Government is keen to preserve the health and
      safety of citizens and residents within its soil from the risk of the
      spread of novel coronavirus; The Saudi Data and Artificial Intelligence
@@ -35,18 +39,10 @@ export default function About() {
      concern if there are violations, as well as providing the ability to
      notify Ministry of Health in the event of a suspected case.
    </p>
- </div>
- {/* <h3 style={{fontFamily:'fantasy',fontSize:'1cm',color:'#59886B'}}> How Tawakkalna Work</h3>
-      <img src={ img}width="100%"/>
-  </Container>
-  <Container>
-    <div style={{backgroundColor:"#EDFFEA"}}>
-     <h1 style={{color:"#216353",fontFamily:'unset',textAlign:'center'}}>Contact Us</h1>
-     <h3 style={{color:"#216353",fontFamily:'unset',fontSize:'small',marginLeft:'15px'}}>Tell:8001289999</h3>
-     <h3 style={{color:"#216353",fontFamily:'unset',fontSize:'small',marginLeft:'15px'}}>Twitter:TawakkalnaApp</h3>
-     <h3 style={{color:"#216353",fontFamily:'unset',fontSize:'10px',marginLeft:'15px'}}>E-mail:contact@tawakkalna.gov.sa</h3>
-    </div>
-  </Container> */}
+   </Col>
+ 
+ </Row>
+ </Container>
   </div>
   )
 }

@@ -135,7 +135,7 @@ const user = [
         count: 1,
         Insurance: [
           {
-            img: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTDeCKRCerfJqNe1YAwSnCOGWlaMdLEk5ChDA&usqp=CAU",
+            img: "https://images.template.net/wp-content/uploads/2016/07/25045903/Standard-Certificate-of-Insurance-Template-Free-Download.jpg",
           },
         ],
       },
