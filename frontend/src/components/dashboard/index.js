@@ -42,26 +42,53 @@ export default function Dashboard() {
     }
   }, []);
 
-  // get src based on type
-  // const getImage = (dashboardItem) => {
-  //   if (dashboardItem.id === 1) {
-  //     return img2;
-  //   }
-  //    else if (dashboardItem.id === 2) {
+  const images = [
+    {
+      id: 1,
+      src: img3,
+    },
+    {
+      id: 2,
+      src: img1,
+    },
+    {
+      id: 3,
+      src: img6,
+    },
+    {
+      id: 4,
+      src: img9,
+    },
+    {
+      id: 5,
+      src: img4,
+    },
+    {
+      id: 6,
+      src: img11,
+    },
+    {
+      id: 7,
+      src: img8,
+    },
+    {
+      id: 8,
+      src: img2,
+    },
+    {
+      id: 9,
+      src: img10,
+    },
+    {
+      id: 11,
+      src: img5,
+    },
+    {
+      id: 12,
+      src: img7,
+    },
+  ];
 
-  //     return img1;
-  //   }
-  //    else if (dashboardItem.id === 3) {
-  //     return img6;
-  //   } 
-    
-  //   else if (dashboardItem.id === 4) {
-  //     return img9;
-  //   } 
-  //   else {
-  //     return "";
-  //   }
-  // };
 
   return (
     <div>
@@ -70,19 +97,25 @@ export default function Dashboard() {
         <Row>
           {user &&
             user.dashboard &&
-            user.dashboard.map((dashboardItem, index) => (
+            user.dashboard.map((dashboardItem) => (
               <Col key={dashboardItem.id}>
                 <Card
                   className="card"
                   style={{ width: "18rem" }}
                   onClick={() => {
-                    navigate("/dashinfo ", {
+                    navigate("/dashinfo "
+                    , {
                       state: { dashboardItem: dashboardItem },
                     });
                   }}
                 >
                   <Card.Body>
-                    <img width="70px" src={getImage(dashboardItem)} />
+                  <img
+                      width="70px"
+                      src={
+                        images.find(({ id }) => id === dashboardItem.id)?.src
+                      }
+                    />
                     <hr />
                     <Card.Title
                       style={{ color: "#01937C", textAlign: "center" }}

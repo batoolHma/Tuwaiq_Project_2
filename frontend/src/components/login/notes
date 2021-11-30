@@ -157,20 +157,24 @@ export default function Dashboard() {
     }
   }, []);
 
-  // get src based on type
-  const getImage = (dashboardItem) => {
-    if (dashboardItem.id === 1) {
-      return img2;
-    } else if (dashboardItem.id === 2) {
-      return img1;
-    } else if (dashboardItem.id === 3) {
-      return img6;
-    } else if (dashboardItem.id === 4) {
-      return img9;
-    } else {
-      return "";
-    }
-  };
+  const images = [
+    {
+      id: 1,
+      src: img2,
+    },
+    {
+      id: 2,
+      src: img1,
+    },
+    {
+      id: 3,
+      src: img6,
+    },
+    {
+      id: 4,
+      src: img9,
+    },
+  ];
 
   return (
     <div>
@@ -179,7 +183,7 @@ export default function Dashboard() {
         <Row>
           {user &&
             user.dashboard &&
-            user.dashboard.map((dashboardItem, index) => (
+            user.dashboard.map((dashboardItem) => (
               <Col key={dashboardItem.id}>
                 <Card
                   className="card"
@@ -191,14 +195,19 @@ export default function Dashboard() {
                   }}
                 >
                   <Card.Body>
-                    <img width="70px" src={getImage(dashboardItem)} />
+                    <img
+                      width="70px"
+                      src={
+                        images.find(({ id }) => id === dashboardItem.id)?.src
+                      }
+                    />
                     <hr />
                     <Card.Title
                       style={{ color: "#01937C", textAlign: "center" }}
                     >
                       {dashboardItem.title}
                     </Card.Title>
-                    {/* <Card.Text>{`${dashboardItem.title}} count`}</Card.Text> */}
+                    {/* <Card.Text>{`${dashboardItem.title} count`}</Card.Text> */}
                     <Card.Text>{dashboardItem.count}</Card.Text>
                   </Card.Body>
                 </Card>

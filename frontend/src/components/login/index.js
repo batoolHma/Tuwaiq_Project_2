@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import axios from "axios";
 import { Container, Row, Col } from "react-bootstrap";
 import { useNavigate, Link } from "react-router-dom";
+import swal from 'sweetalert';
 
 export default function LogIn() {
   const [userName, setuserName] = useState("");
@@ -25,12 +26,15 @@ export default function LogIn() {
         console.log(res);
         navigate('/afterLogin ', { state: { id:res.data.id} });
         localStorage.setItem("userId",res.data.id)
+        
         // navigate("/afterLogin");
       })
       .catch((err) => {
         console.log(err.response.data);
+        swal("User not found", "Try Again", "error");
         console.log(
           "invalid user name or password are wrong please try again:"
+
         );
       });
   }
