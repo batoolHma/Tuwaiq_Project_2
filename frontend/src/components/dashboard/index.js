@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState, useEffect } from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./dashboard.css";
 import Navigation from "../navigation/index";
 //photo
@@ -122,8 +122,8 @@ export default function Dashboard() {
                     >
                       {dashboardItem.title}
                     </Card.Title>
-                    {/* <Card.Text>{`${dashboardItem.title}} count`}</Card.Text> */}
-                    <Card.Text>{dashboardItem.count}</Card.Text>
+                    
+                    <Card.Text>Count <br/>{dashboardItem.count}</Card.Text>
                   </Card.Body>
                 </Card>
               </Col>

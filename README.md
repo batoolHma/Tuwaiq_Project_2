@@ -20,12 +20,12 @@
 
 # The Requirements of The Project
 I used both Front-End and Back-End technologies to build some features of the Tawakklna website 
-- Front-End technologies :
+# Front-End technologies :
 - HTML
 - CSS
 - JS
 - REACT
-- Back-End technologies:
+# Back-End technologies:
 - Express
 - Node.js
 - REST API

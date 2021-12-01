@@ -12,10 +12,10 @@ import Navigation from "./components/navigation/index";
 import Main from "./components/main/index";
 import About from "./components/main/about";
 import NextMain from "./components/main/afterLogin";
-import HowTowork from './components/main/htwork'
-import  ContactUs from './components/main/contactUs'
-import  DashboardInfo from './components/dashboard/info'
-// import Dashboard from './components/dashboard/index';
+import HowTowork from "./components/main/htwork";
+import ContactUs from "./components/main/contactUs";
+import DashboardInfo from "./components/dashboard/info";
+
 ReactDOM.render(
   // The provider will enable the child components to access the store
 
@@ -26,15 +26,14 @@ ReactDOM.render(
       <Route path="/" element={<App />}>
         <Route path="/main" element={<Main />} />
         <Route path="/about" element={<About />} />
-
       </Route>
       <Route path="login" element={<LogIn />} />
       <Route path="signUp" element={<SignUp />} />
       <Route path="dashboard" element={<Dashboard />} />
       <Route path="afterLogin" element={<NextMain />} />
-             <Route path="htwork" element={<HowTowork/>}/>
-             <Route path="cus" element={< ContactUs/>}/>
-             <Route path="/dashinfo" element={< DashboardInfo/>}/>
+      <Route path="htwork" element={<HowTowork />} />
+      <Route path="cus" element={<ContactUs />} />
+      <Route path="/dashinfo" element={<DashboardInfo />} />
       <Route
         path="*"
         element={
