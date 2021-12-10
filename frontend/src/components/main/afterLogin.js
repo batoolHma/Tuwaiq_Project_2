@@ -13,23 +13,17 @@ const date = `Date: ${current.getDate()}/${
 const NextMain = () => {
   //userinfo
   const state = useLocation();
-  // console.log("inside: after login page!: "+state.id);
-  // if(state){
 
-  // }
   const [user, setUser] = useState([]);
-  // const [drivingLicense,setDrivingLicense]=useState({});
 
   const userId = state && state.state && state.state.id;
 
-  // const data= {id:userId}
-  console.log(userId);
+  // console.log(userId);
   const navigate = useNavigate();
   useEffect(async () => {
     const userId1 = await localStorage.getItem("userId");
     const data = { id: userId1 };
 
-    console.log(userId1);
     if (userId1) {
       axios
 

@@ -4,6 +4,7 @@ import Button from "react-bootstrap/Button";
 import axios from "axios";
 import { Container, Row } from "react-bootstrap";
 import { useNavigate } from "react-router-dom";
+import './signUp.css'
 export default function SignUp() {
   const [userName, setuserName] = useState("");
   const [passWord, setPassword] = useState("");
@@ -37,7 +38,7 @@ export default function SignUp() {
   }
 
   return (
-    <div style={{border:'solid',color:"white",backgroundColor:'#CDF2CA'}} className="signUp">
+    <div  className="signUp">
       <Container>
         <Row>
           <Form onSubmit={handleSubmit}>
@@ -49,7 +50,7 @@ export default function SignUp() {
                 onChange={(event) => setuserName(event.target.value)}
               />
             </Form.Group>
-            <Form.Group size="lg" controlId="userName">
+            <Form.Group size="lg" controlId="NationalId">
               <Form.Label  style={{color:'black'}}>National Id</Form.Label>
               <Form.Control
                 type="text"
@@ -65,7 +66,7 @@ export default function SignUp() {
                 onChange={(event) => setPassword(event.target.value)}
               />
             </Form.Group>
-            <Button style={{backgroundColor:'#105652'}} size="lg" type="submit" disabled={!validateForm()}>
+            <Button id="signup-id"  size="lg" type="submit" disabled={!validateForm()}>
               sign Up
             </Button>
           </Form>

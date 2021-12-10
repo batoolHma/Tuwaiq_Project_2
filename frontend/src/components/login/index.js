@@ -18,20 +18,15 @@ export default function LogIn() {
       userName: userName,
       passWord: passWord,
     };
-    console.log(data);
+
     axios
       .post("user/login/", data)
       .then((res) => {
-        console.log(res);
         navigate("/afterLogin ", { state: { id: res.data.id } });
         localStorage.setItem("userId", res.data.id);
       })
       .catch((err) => {
-        console.log(err.response.data);
         swal("User Name Or Password Are Wrong", "Try Again", "error");
-        console.log(
-          "invalid user name or password are wrong please try again:"
-        );
       });
   }
 
@@ -48,7 +43,7 @@ export default function LogIn() {
               {" "}
               <img
                 id="logo"
-                width="10px"
+                width="2px"
                 src="https://tawakkalna.sdaia.gov.sa/assets/img/illustrations/twlogo.png"
               />
             </div>

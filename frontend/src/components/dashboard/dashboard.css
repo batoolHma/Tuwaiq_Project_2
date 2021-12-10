@@ -8,6 +8,6 @@ height: 70%;
  margin: 50px;
  padding: 40px;
  border: solid  +rgb(213, 253, 244);;
-
+ box-shadow: inset 0 0 0.2em 0 #ebecec, 0 0 0.2em 0 #ebecec;
 }
 

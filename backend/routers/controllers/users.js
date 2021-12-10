@@ -6,12 +6,11 @@ const getAllUsers = (req, res) => {
 };
 const getUser = (req, res) => {
   const { userName, passWord } = req.body;
-  console.log(req.body);
+  
   const foundUser = user.find((elem) => {
-    return elem.userName == userName && elem.passWord == passWord;
+    return elem.userName === userName && elem.passWord === passWord;
    
-  });
-  console.log(foundUser);
+  }); 
 
   if (foundUser) res.send(foundUser);
   //   return
@@ -45,7 +44,7 @@ function dashBoard(req, res) {
 
 function userInfo(req, res) {
   
-  console.log("hello", req.body);
+ 
   const info = user.find(({ id }) => id === parseInt(req.body.id));
   if (info) res.send(info);
   else res.status(404).send("error!! cannot found the user please try again");
